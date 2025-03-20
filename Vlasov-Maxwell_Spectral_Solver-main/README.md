@@ -14,8 +14,7 @@
 
 ## Overview
 
-This repository solves the Vlasov-Maxwell equations by applying a Hermite-Fourier decomposition to the problem.
-
+This project simulates 1D and 3D evolving plasma distributions that start off roughly gaussian with a perturbation.
 The project can be downloaded from its [GitHub repository](https://github.com/uwplasma/Vlasov-Maxwell_Spectral_Solver).
 
 ---
@@ -83,9 +82,6 @@ Once you have your prerequisites installed, navigate to the `Run_JAX_VM_solver.p
 
 ### Testing
 
-Current tests include:
-- A comparison of previous Hermite code to the existing implementation.
-- A 1D Landau Damping rate test, which can be compared to results obtained using Mathematica. The results are stored in `WolframCodeCSV`, and the computations are performed by the code in `WolframCode.txt` (remember to update the file path to match your local setup).
 
 ---
 
