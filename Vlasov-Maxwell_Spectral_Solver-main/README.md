@@ -22,7 +22,7 @@ The project can be downloaded from its [GitHub repository](https://github.com/uw
 
 ## Features
 
-This Vlasov-Maxwell Spectral Solver runs using the JAX framework, utilizing optimizations within the module. It currently evolves the constants Ck over time using a Hermite-Fourier basis, governed by the Vlasov-Maxwell equations. This is then applied to a variety of examples, accessible through the `Examples_1D` and `Examples_2D` files in the `Examples` folder.
+This Vlasov-Maxwell Spectral Solver runs using the JAX framework, utilizing optimizations within the module. It currently takes initial hermite coefficients or initial electric and magnetic fields, calculated by an initialization function, and evolves them using the Vlasov-Maxwell equations. You can see some examples that do this through the files in the `Examples` folder.
 
 These parameters aim to model:
 - Kelvin-Helmholtz Instabilities
