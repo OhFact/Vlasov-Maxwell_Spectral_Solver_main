@@ -36,52 +36,69 @@ The `JAX_VM_solver.py` file defines the necessary functions for modeling, while 
 ## Project Structure
 
 ```
-└── Vlasov-Maxwell_Spectral-main
-    ├── Examples
-    │   ├── Examples_1D
-    │   │   ├── density_perturbation_1D.py
-    │   │   ├── Landau_Damping_1D.py
-    │   │   ├── pressure_anisotropy_HF_1D.py
-    │   │   └── Two_Stream_1D.py
-    │   └── Examples_2D
-    │   │   ├── Kelvin_Helmholtz_2D.py
-    │   │   └── Orszag_Tang.py
-    ├── ExampleParams
-    │   ├── plasma_parameters_density_perturbation.json
-    │   ├── plasma_parameters_Kelvin_Helmholtz_1D.json
-    │   ├── plasma_parameters_Kelvin_Helmholtz_2D.json
-    │   ├── plasma_parameters_Landau_damping_1D.json
-    │   ├── plasma_parameters_Landau_damping_HF_1D.json
-    │   └── pressure_anisotropy.json
-    ├── JAX_Vlasov_Maxwell_solver
-    │   ├── __init__.py
-    │   ├── energy.py
-    │   └── JAX_VM_solver.py
-    ├── Run_JAX_VM_solver.py
-    ├── requirements.txt
-    └── CodeTests
-        ├── LandauDampingRate.py
-        ├── WolframCodeCSV
-        │   ├── damping_rate_1000000.py
-        │   └── omega.py
-        ├── TestingHermite.py
-        └── Compute_C_nmp_test.py
+C:.
+│   README.md
+│   requirements.txt
+│   Run_JAX_VM_solver.py
+│
+├───CodeTests
+│   │   Compute_C_nmp_test.py
+│   │   LandauDampingRate.py
+│   │   TestingHermite.py
+│   │
+│   ├───WolframCodeCSV
+│   │   │   damping_rate_1000000.csv
+│   │   │   omega.csv
+│   │   │   WolframCode.txt
+│
+├───ExampleParams
+│   │   plasma_parameters.json
+│   │   plasma_parameters_density_perturbation.json
+│   │   plasma_parameters_Kelvin_Helmholtz_1D.json
+│   │   plasma_parameters_Kelvin_Helmholtz_2D.json
+│   │   plasma_parameters_Landau_damping_1D.json
+│   │   plasma_parameters_Landau_damping_HF_1D.json
+│   │   pressure_anisotropy_1D.json
+│
+├───Examples
+│   │   Landau_damping_HF_1D_Ex.py
+│   │
+│   ├───Examples_1D
+│   │   │   density_perturbation_1D.py
+│   │   │   Landau_Damping_1D.py
+│   │   │   pressure_anisotropy_HF_1D.py
+│   │   │   Two_Stream_1D.py
+│   │
+│   ├───Examples_2D
+│   │   │   Kelvin_Helmholtz_2D.py
+│   │   │   Orszag_Tang.py
+│
+└───JAX_Vlasov_Maxwell_solver
+    │   Energy.py
+    │   JAX_VM_solver.py
+    │   _ExampleFunctions.py
+    │   _plot.py
+    │   __init__.py
 ```
-
 ---
 
 ## Getting Started
 
 ### Prerequisites
 
-This repository has requirements stored in [`requirements.txt`](requirements.txt).
+This repository has requirements stored in [`requirements.txt`](requirements.txt). 
+This repo has tested successfully up to these versions:
+jax - 0.5.0
+jaxlib - 0.5.0
+matplotlib - 3.10.1
+scipy - 1.15.2
+diffrax - 0.7.0
+Further versions may work, though they havent been tested yet.
 
 ### Running the Code
 
-Once you have your prerequisites installed, navigate to the `Run_JAX_VM_solver.py` file and execute the program. Ensure that the correct parameters are set and that the appropriate sections of the code are enabled. Adjust which plots to view through the comments in the file, and if you want to print initial conditions, they can be dumped into a text file.
-
+Once you have your prerequisites installed, navigate to the `Run_JAX_VM_solver.py` file if you have loaded in your own personal code, or instead navigate to one of the example files in the code base. Then, run the code with some initial conditions.
 ### Testing
-
 
 ---
 
